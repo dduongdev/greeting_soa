@@ -1,7 +1,10 @@
 package com.dduongdev.config;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.filter.DelegatingFilterProxy;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+import jakarta.servlet.Filter;
 
 /**
  * Class khởi tạo ứng dụng web. Tạo và cấu hình DispatcherServlet của SpringMvc,
@@ -25,6 +28,11 @@ public class WebInitializer extends AbstractAnnotationConfigDispatcherServletIni
 	@Override
 	protected String[] getServletMappings() {
 		return new String[] { "/" };
+	}
+
+	@Override
+	protected Filter[] getServletFilters() {
+		return new Filter[] { new DelegatingFilterProxy("jwtRequestFilter") };
 	}
 
 }
