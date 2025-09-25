@@ -102,7 +102,28 @@
 	<dependency>
 	    <groupId>org.springframework</groupId>
 	    <artifactId>spring-aop</artifactId>
-	    <version>6.2.2</version>
+	    <version>${spring-version}</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-jdbc</artifactId>
+	    <version>${spring-version}</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-tx</artifactId>
+	    <version>${spring-version}</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+	<dependency>
+	    <groupId>com.mysql</groupId>
+	    <artifactId>mysql-connector-j</artifactId>
+	    <version>9.4.0</version>
 	</dependency>
   </dependencies>
 </project>
